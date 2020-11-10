@@ -9,7 +9,7 @@ from employees as e
 
 select first_name, last_name, hire_date
 from employees
-where hire_date between '1986-01-01' and '1986-12-31';
+where hire_date like '%1986%';
 			
 				
 --List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
@@ -68,6 +68,3 @@ select last_name, count(last_name) as last_name_count
 from employees
 group by last_name
 order by last_name_count desc;
-
-
-				
